@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <fstream>
+#include <stdlib.h>
 
 
 using namespace std;
@@ -11,6 +12,10 @@ void init();
 int moneyLeft();
 
 
+string name;
+double total;
+string date;
+
 int main()
 {
     ifstream fileTest;
@@ -18,6 +23,13 @@ int main()
     if(!fileTest.is_open()){
         init();
     }
+    else{
+        fileTest >> name;
+        fileTest >> total;
+        fileTest >> date;
+    }
+    switch
+
 
     cout << "Hello world!" << endl;
     return 0;
@@ -26,7 +38,18 @@ int main()
 void init(){
 
     cout << "Hello New User!" << endl;
-    cout << "To set things up I'll need"
+    cout << "To set things up I'll need some info real quick!" << endl;
+    cout << "------------------------------------------------" << endl;
+    cout << "Username: ";
+    cin >> name;
+    cout << "------------------------------------------------" << endl;
+    cout << "Start Amount: ";
+    cin >> total;
+    system("cls");
+    cout << "------------------------------------------------" << endl;
+    cout << "-------------------THANK-YOU--------------------" << endl;
+    cout << "------------------------------------------------" << endl;
+    system("cls");//gross I know
     return;
 }
 
